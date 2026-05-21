@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  background-color: #131334;
+  color: #ebebeb;
+}
+
+.container {
+  max-width: 992px; /* viene uguale su tutti gli schermi */
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+/* Griglia calendario */
+.day {
+  display: inline-block;
+  width: 14%;
+  height: 130px;
+  /* Per poter posizionare al centro il giorno, ho bisogno di position relative di questo div e position absolute del giorno */
+  position: relative;
+  border: 1px solid #0d6f83;
+  border-radius: 10px;
+  cursor: pointer; /* il pointer diventa manina */
+}
+
+.day:hover,
+.day:hover h3 {
+  background-color: #15132e;
+}
+
+.day h3 {
+  text-align: center;
+  margin: 0;
+  position: absolute; /* figlio absolute dentro un padre relative si fissa in una posizione rispetto al padre e non si muove piu */
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+.currentDay,
+.currentDay:hover {
+  background-color: #ffc0cb;
+}
+
+.sunday {
+  color: red;
+}
