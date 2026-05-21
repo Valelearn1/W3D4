@@ -31,7 +31,7 @@ h1 {
 
 .day:hover,
 .day:hover h3 {
-  background-color: #15132e;
+  background-color: #0a0917;
 }
 
 .day h3 {
@@ -50,4 +50,61 @@ h1 {
 
 .sunday {
   color: red;
+}
+
+/* Impegni */
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+#addMeeting div {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 50px;
+}
+
+form {
+  display: inline;
+}
+
+input {
+  width: 130px;
+  height: 36px;
+  background-color: #0a0917;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ebebeb;
+}
+
+#newMeetingDay {
+  display: inline-block;
+  min-height: 40px;
+}
+
+form button {
+  cursor: pointer;
+  background-color: #7a408a;
+  color: #ebebeb;
+  border: none;
+  border-radius: 5px;
+  width: 130px;
+  height: 36px;
+  padding: 10px;
+}
+
+#newMeetingName {
+  width: 200px;
+}
+
+#newMeetingTime::-webkit-calendar-picker-indicator {
+  background-color: #7a408a;
+  border-radius: 50px;
+  cursor: pointer;
 }

@@ -23,6 +23,32 @@
         <div id="calendar"></div>
         <!-- Impegni -->
         <h2>Add meeting</h2>
+        <!-- Creare form -->
+        <div id="addMeeting">
+          <div>
+            <h4>Meeting Day</h4>
+            <span id="newMeetingDay">Scegli il giorno</span>
+            <!-- id per formattare la data -->
+          </div>
+          <form>
+            <div>
+              <h4>Meeting Time</h4>
+              <input type="time" id="newMeetingTime" />
+            </div>
+            <div>
+              <h4>Meeting Name</h4>
+              <input
+                type="text"
+                id="newMeetingName"
+                placeholder="Inserisci l'impegno"
+              />
+            </div>
+            <div>
+              <h4>Add</h4>
+              <button type="submit">Save Meeting</button>
+            </div>
+          </form>
+        </div>
       </main>
     </div>
 
