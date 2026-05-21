@@ -1,6 +1,7 @@
 const now = new Date();
 const getYear = now.getFullYear(); // prende l'anno, usando il local time
 const getMonth = now.getMonth(); // getMonth contiene i numeri da 0 a 11 (perché si parte da 0)
+const appointments = []; // conterrà gli appuntamenti già inseriti (per tenere memoria di quello già fatto)
 
 console.log(getYear);
 console.log(getMonth);
@@ -61,6 +62,14 @@ const createDays = (daysNumber) => {
     dayCellDiv.addEventListener("click", function () {
       unselectAllDays(); // delezionare il giorno selezionato prima / dopo aver rimosso la classe,
       dayCellDiv.classList.add("selected"); // aggiungi dove ho fatto clic
+      changeMeetingDay(i);
+      if (appointments[i] && appointments[i].length > 0) {
+        // se ci sono appuntamenti nel giorno selezionato, mostrali
+        showAppointments(i); // è una funzione
+      } else {
+        const appointmentsDiv = document.querySelector("#appointments");
+        appointmentsDiv.computedStyleMap.display = "none"; // il div appointments non lo deve mostrare se non ci sono appuntamenti
+      }
     });
 
     // Creiamo il giorno
@@ -95,4 +104,10 @@ function unselectAllDays() {
     // quando lo trovi,
     previousSelected.classList.remove("selected"); // rimuovi la classe
   }
+}
+
+function changeMeetingDay(i) {
+  const newMeetingDay = document.querySelector("#newMeetingDay"); // dobbiamo intercettare newMeetingDay
+  newMeetingDay.textContent = i; // partiamo da zero
+  newMeetingDay.classList.add("daySelected"); // dobbiamo fare una classe per fare in modo che il numero aumenti
 }

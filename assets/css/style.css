@@ -7,6 +7,9 @@
   color: #ebebeb;
 }
 
+main {
+}
+
 .container {
   max-width: 992px; /* viene uguale su tutti gli schermi */
   margin: 0 auto;
@@ -111,4 +114,19 @@ form button {
 
 .selected {
   border: 5px solid #7a408a;
+}
+
+/* lista impegni */
+#appointments ul li {
+  font-size: 1.2em;
+}
+
+.daySelected {
+  width: 36px;
+  height: 36px;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #0a0917;
+  border-radius: 5px;
+  padding-left: 5px;
 }
