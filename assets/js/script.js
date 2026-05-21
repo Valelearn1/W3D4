@@ -58,6 +58,10 @@ const createDays = (daysNumber) => {
     const dayCellDiv = document.createElement("div"); // crea il div
     dayCellDiv.classList.add("day"); // aggiungiamo la classe day
     // le celle dovranno essere cliccabili - DA FARE POI
+    dayCellDiv.addEventListener("click", function () {
+      unselectAllDays(); // delezionare il giorno selezionato prima / dopo aver rimosso la classe,
+      dayCellDiv.classList.add("selected"); // aggiungi dove ho fatto clic
+    });
 
     // Creiamo il giorno
     const cellValue = document.createElement("h3"); // crea un h3 (nome e numero del giorno)
@@ -83,3 +87,12 @@ const createDays = (daysNumber) => {
 };
 
 createDays(dayInMonth()); // chiamo la funzione una volta sola
+
+function unselectAllDays() {
+  // deseleziona l'elemento selezionato prima
+  const previousSelected = document.querySelector(".selected"); // deve beccare l'unico elemento che ha quella classe
+  if (previousSelected) {
+    // quando lo trovi,
+    previousSelected.classList.remove("selected"); // rimuovi la classe
+  }
+}

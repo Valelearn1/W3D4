@@ -108,3 +108,7 @@ form button {
   border-radius: 50px;
   cursor: pointer;
 }
+
+.selected {
+  border: 5px solid #7a408a;
+}
